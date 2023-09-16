@@ -1,0 +1,86 @@
+<!doctype html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Formularios y autovalidaciones en HTML">
+        <meta name="keywords" content="Laboratorio 4">
+        <title>Laboratorio #4 - Formularios y autovalidaciones en HTML </title>
+    </head>
+        <body>
+            <form action="file:///C:/Users/white/Downloads/DSIV/CODE/LAB4/Laboratorio%20%234%20-%20Formularios%20y%20autovalidaciones%20en%20HTML%20-%20CristianAndrade.html" >
+                <section>
+                    <h1 style="text-align:center;">CURRICULUM VITAE <input type="text" id="Fname" name="Fname" placeholder="Nombre"> <input type="text" id="Lname" name="Lname" placeholder="Apellido"> </h1>
+                    <hr>
+                </section>
+                <section>
+                    <label for="myfile">Agrega tu foto perfil:</label>
+                    <input type="file" id="myfile" name="myfile">
+                </section>
+                <hr>
+                <section>
+                    <h4>Sección de Experiencia</h4>
+                    <textarea name="message" style="width:600px; height:100px;" placeholder="The cat was playing in the garden."></textarea>
+                </section>
+                <hr>
+                <section>
+                    <h4>Sección de Educación</h4>
+                    <textarea name="message" style="width:600px; height:100px;" placeholder="The cat was playing in the garden."></textarea>
+                </section>
+                <hr>
+                <section>
+                    <h4>Sección de Conocimientos</h4>
+                    <textarea name="message" style="width:600px; height:100px;" placeholder="The cat was playing in the garden."></textarea>
+                </section>
+                <hr>
+                <section>
+                    <h4>Sección de Datos Generales</h4>
+                    <textarea name="message" style="width:600px; height:100px;" placeholder="The cat was playing in the garden."></textarea>
+                </section>
+                <hr>
+                <section>
+                    <h4>Sección Abierta</h4>
+                    <textarea name="message" style="width:600px; height:100px;" placeholder="The cat was playing in the garden."></textarea>
+                </section>
+                <hr>
+                <section>
+                    <input type="submit">
+                </section>
+                <br><br>
+            </form>
+            <hr>
+            <section>
+                <form id="myForm" action="" method="post">
+                    <label for="selectOption">MENU CURRICULUM VITAE:</label><br><br>
+                        <select id="selectOption" name="selectOption">
+                            <option value="option0">ninguno</option>
+                            <option value="option1">CURRICULUM VITAE Cristian andrade</option>
+                            <option value="option2">CURRICULUM VITAE Emily</option>
+                            <option  value="option3">Crear CURRICULUM VITAE</option>
+                        </select>
+                    <input type="submit">
+                </form>
+                <script>
+                    // Get references to the form and select element
+                    const form = document.getElementById('myForm');
+                    const select = document.getElementById('selectOption');
+            
+                    // Add an event listener to the select element
+                    select.addEventListener('change', function () {
+                        // Get the selected option's value
+                        const selectedOption = select.value;
+            
+                        // Update the form action based on the selected option
+                        if (selectedOption === 'option0') {
+                            form.action = 'none'; // Change to the desired URL for option 1
+                        } else if (selectedOption === 'option1') {
+                            form.action = 'file:///C:/Users/white/Downloads/DSIV/CODE/LAB4/Laboratorio%20%234%20-%20Formularios%20y%20autovalidaciones%20en%20HTML%20-%20CristianAndrade.html'; // Change to the desired URL for option 1
+                        } else if (selectedOption === 'option2') {
+                            form.action = 'file:///C:/Users/white/Downloads/DSIV/CODE/LAB4/Laboratorio%20%234%20-%20Formularios%20y%20autovalidaciones%20en%20HTML%20-%20Emily.html'; // Change to the desired URL for option 2
+                        } else if (selectedOption === 'option3') {
+                            form.action = 'file:///C:/Users/white/Downloads/DSIV/CODE/LAB4/formulario%20vitae.html'; // Change to the desired URL for option 3
+                        }
+                    });
+                </script>
+            </section>
+        </body>
+</html>
