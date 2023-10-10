@@ -1,0 +1,144 @@
+body{
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-family: Arial, sans-serif;  
+    background-color: royalblue;
+}
+
+header{
+    margin-left: 10%; 
+    margin-right: 10%; 
+    margin-bottom: 1%; 
+    padding: 0%;  
+    background-color: white;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section, footer{
+    margin-left: 10%; 
+    margin-right: 10%; 
+    margin-bottom: 1%; 
+    padding: 1%;         
+    background-color: white;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer{
+    margin-bottom: 0%; 
+    padding-bottom: 0%; 
+    background-color: #1602a2;
+}
+
+.title{
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    padding: 1%; 
+    background-color: #1602a2;}
+
+.header-title{
+    font-family: fantasy; 
+    font-size: xx-large; 
+    color: white;
+}
+
+.header-description{
+    font-family: cursive; 
+    background-color: white;
+}
+
+.nav-header{
+    position: sticky;  
+    background-color: #1602a2;
+}
+
+.menu{
+    display: flex;  
+    justify-content: space-around;  
+    padding: initial;
+}
+
+.menu-item{
+    list-style: none;  
+    padding: 1%;    
+    margin: 1%;  
+    background-color: greenyellow;  
+    border: solid;  
+    border-radius: 16%; 
+    border-width: thick; 
+    cursor: pointer;   
+    transition: background-color 0.3s ease;}
+
+.menu-item:hover {
+    background-color: lightgreen;
+}
+
+.section-1{
+    position: relative;
+}
+
+.section-1-block-1{
+    display: inline-flex;
+}
+
+.articles{
+    display: flex;    
+    flex-wrap: wrap;  
+    justify-content: center;   
+    margin: 1%;  
+    padding: 1%;  
+    padding-bottom: 28%;  
+    background-color: #fff;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.articles img{
+    width: 150px; 
+    height: 150px;}
+
+.articles p{  
+    width: auto;   
+    height: 70px;  
+    overflow: hidden;}
+
+a:hover {
+    color: greenyellow;    
+    background-color: #1602a2;
+}
+
+.section-1-block-2{
+    display: flex; 
+    justify-content: center;
+}
+
+.section-2{
+    position: relative;
+}
+
+div.background {  
+    background: url(the-isle-dinosaur.gif) repeat; 
+    background-size: cover; 
+    border: 2px solid black;}
+
+div.transbox {  
+    margin: 30px;  
+    background-color: greenyellow;  
+    border: 1px solid black;  
+    opacity: 0.8;}
+
+div.transbox p {  
+    margin: 5%;  
+    font-weight: bold;  
+    color: #000000;}
+
+.logos{
+    display: flex; 
+    justify-content: space-between;
+}
+
+.logo-utp img,  .logo-fisc img{
+    width: 150px; 
+    height: 150px;
+}
