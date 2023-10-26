@@ -1,0 +1,47 @@
+/* Style the header
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+Style the table 
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+Style table headers 
+.titles th {
+  background-color: #333;
+  color: white;
+  text-align: left;
+}
+
+Style table cells 
+.table td, .table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+Style buttons 
+button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f79;
+}
+
+Style the footer 
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+} */
