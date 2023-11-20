@@ -64,17 +64,19 @@
                     <td>Un check, e imprimir su estado (uso de atributos del checkbox)</td>
                     <td><input type="checkbox" id="myCheckbox">Video comercial</td>
                     <td><button onclick="checkStatus()">Try it</button></td>
+                  </tr>
+                  <!--1.9.	Un radio e imprimir su estado (uso de atributos del radiobutton)-->
+                  <tr>
+                      <td>Un radio e imprimir su estado (uso de atributos del radiobutton)</td>
+                      <td><input type="radio" id="radioButton" name="radioGroup" value="On">On<input type="radio" id="radioButton" name="radioGroup" value="Off">Off</td>
+                      <td><button onclick="printRadioState()">Try it</button></td>
+                  </tr>
+                  <!--1.10.	Una validación de un campo, si este es numero enviar un mensaje que solo se permiten teclas. (investigar con qué función se hace)-->
+                  <tr>
+                    <td>Una validación de un campo, si este es numero enviar un mensaje que solo se permiten teclas. (investigar con qué función se hace)</td>
+                    <td><input type="text" id="userInput">        <p id="message"></p></td>
+                    <td><button onclick="validateInput()">Try it</button></td>
                 </tr>
-                  <tr>
-                    <td>Un radio e imprimir su estado (uso de atributos del radiobutton)</td>
-                    <td>Creador de anuncios de TikTok</td>
-                    <td><button onclick="functionname()">try it</button></td>
-                  </tr>
-                  <tr>
-                    <td>Una validación de un campo, si este es numero enviar un mensaje que solo se permiten teclas. (investigar con que función se hace)</td>
-                    <td>Anuncios de video</td>
-                    <td><button onclick="functionname()">try it</button></td>
-                  </tr>
             </table>
     </section>
     <footer>
@@ -137,8 +139,30 @@
             var status = checkbox.checked ? "Checked" : "Unchecked";
             alert("Checkbox Status: " + status);
         }
-
-
+        function printRadioState() {
+            const radioButton = document.querySelector('input[name="radioGroup"]:checked');
+            if (radioButton) {
+                const state = radioButton.value;
+                console.log("Radio button state: " + state);
+            } else {
+                console.log("Please select a radio button.");
+            }
+        }
+        function validateInput() {
+            // Get the user input from the input field
+            var userInput = document.getElementById("userInput").value;
+        // Check if the input contains both letters and numbers
+        if (/[a-zA-Z]+.*\d|\d+.*[a-zA-Z]/.test(userInput)) {
+            // If it contains both letters and numbers, display the message
+            document.getElementById("message").textContent = "Solo se permiten teclas.";
+        } else if (/[a-zA-Z]/.test(userInput)) {
+            // If it only contains letters, clear the message
+            document.getElementById("message").textContent = "Acceptable";
+        } else if (/\d/.test(userInput)) {
+            // If it only contains numbers, display the message
+            document.getElementById("message").textContent = "Solo se permiten teclas.";
+        }
+        }
 
     </script>
 </body>
